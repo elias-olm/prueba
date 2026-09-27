@@ -1,5 +1,14 @@
-Clonar un repositorio en una carpeta:
+giClonar un repositorio en una carpeta:
 git clone <url-del-repositorio>
+
+Crear un nuevo repositorio:
+git init nombre-del-proyecto
+
+Renombrar la rama principal main:
+git branch -M main
+
+Conectar el repositorio local con GitHub:
+git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
 
 Ver el estado de los archivos:
 git status
@@ -18,9 +27,11 @@ git log
 
 Subir los cambios al repositorio en internet(si es a una rama distinta se cambia el main por el nombre de la rama):
 git push origin main
+git push -u origin main El parámetro -u hace que la rama local main quede enlazada permanentemente con la rama main del servidor origin
 
-Bajar los cambios del repositorio de internet:
+Bajar los cambios del repositorio de internet(puede ser de main o de una rama distina para agregarla a la nuestra):
 git pull origin main
+git pull origin main --rebase (para cuando se crea y hay cosas que no se descargaron)
 
 Ver actualizaciones de ramas:
 git fetch
